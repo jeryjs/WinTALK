@@ -1,5 +1,4 @@
 import os
-import openai
 import speech_utils as su
 
 
