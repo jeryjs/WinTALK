@@ -1,5 +1,6 @@
 import os
 import speech_utils as su
+import chat
 
 
 def main():
@@ -8,7 +9,7 @@ def main():
 
     
     print("Hello!!")
-    su.text_to_speech(su.speech_to_text(2))
+    su.text_to_speech(chat.chatPrompt(su.speech_to_text()))
 
 
 if __name__ == "__main__":

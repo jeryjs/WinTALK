@@ -47,6 +47,7 @@ def speech_to_text(model=0, language='en-IN'):
 
 def text_to_speech(text):
     print('tts said...')
+    print('「' + text+'」')
     engine = pyttsx3.init()
     voices = engine.getProperty('voices')
     engine.setProperty('voice', voices[1].id)
