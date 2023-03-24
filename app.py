@@ -8,7 +8,7 @@ def main():
 
     
     print("Hello!!")
-    su.text_to_speech(su.speech_to_text(0))
+    su.text_to_speech(su.speech_to_text(2))
 
 
 if __name__ == "__main__":
