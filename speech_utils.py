@@ -4,14 +4,13 @@ import app as MainApp
 from time import sleep
 import openai
 import pyttsx3
-from pydub import AudioSegment
 from pydub.playback import play
 import speech_recognition as sr
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
-def speech_to_text(model=0):
+def speech_to_text(model=0, language='en-IN'):
     r = sr.Recognizer()
 
     # with sr.AudioFile("Recording.wav") as source:
