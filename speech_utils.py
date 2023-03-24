@@ -1,6 +1,4 @@
-import io
 import os
-import app as MainApp
 from time import sleep
 import openai
 import pyttsx3
@@ -53,7 +51,3 @@ def text_to_speech(text):
     engine.setProperty('voice', voices[1].id)
     engine.say(text)
     engine.runAndWait()
-
-
-if __name__ == "__main__":
-    MainApp.main()
