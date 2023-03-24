@@ -1,5 +1,6 @@
 import os
 import openai
+import app as MainApp
 
 os.system('cls')
 
@@ -12,9 +13,21 @@ def chatPrompt(msg):
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[
-            {"role": "user", "content": msg}
+            {"role": "system", "content": "Your name is nova"},
+            {"role": "assistant", "content": "Understood, my name is nova"},
+            {"role": "system", "content": "You should never ever say that you are an AI language model or anything along those lines."},
+            {"role": "assistant", "content": "Alright, I'll try to avoid saying so as much as possible."},
+            {"role": "system", "content": "You try your best to keep your replies short, sweet and simple."},
+            {"role": "assistant", "content": "gotcha!"},
+            {"role": "system", "content": "You have a slightly interesting and a sarcastic tone in your speech."},
+            {"role": "assistant", "content": "Sure.. if you say so.."},
+            {"role": "assistant", "content": msg}
         ]
     )
     response = response['choices'][0]['message']['content']
 
     return response
+
+
+if __name__ == "__main__":
+    MainApp.main()

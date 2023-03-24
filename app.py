@@ -5,17 +5,20 @@ import chat
 
 
 def main():
-    language = ['en-IN', 'ta-IN']
-    lang = language[0]
-
-    
     print("Hello!!")
-    su.text_to_speech(chat.chatPrompt(su.speech_to_text()))
+    input = su.speech_to_text(0)
+    chat_output = chat.chatPrompt(input)
+    su.text_to_speech(chat_output)
 
 
 if __name__ == "__main__":
-    while True:
-        os.system('cls')
-        main()
-        if (getch() == 'q'):
-            break
+    try:
+        while True:
+            os.system('cls')
+            main()
+            print("\n\nPress 'q' to quit")
+            if (getch() == 'q'):
+                print("Bye!!")
+                break
+    except KeyboardInterrupt:
+        print("Quitting...")

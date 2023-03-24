@@ -37,7 +37,7 @@ def speech_to_text(model=0, language='en-IN'):
             stt_output = r.recognize_sphinx(audio)
 
         os.system('cls')
-        print('Converting audio transcripts into text\n\n「' + stt_output+'」\n')
+        print('You said:\n\n「' + stt_output+'」\n')
     except Exception as e:
         stt_output = "Sorry, I didnt get that.."
         print("\n"+stt_output+"\n", e)
