@@ -1,3 +1,4 @@
+from msvcrt import getch
 import os
 import speech_utils as su
 import chat
@@ -13,5 +14,8 @@ def main():
 
 
 if __name__ == "__main__":
-    os.system('cls')
-    main()
+    while True:
+        os.system('cls')
+        main()
+        if (getch() == 'q'):
+            break
